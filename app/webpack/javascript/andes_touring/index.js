@@ -3,9 +3,6 @@
 // logic in a relevant structure within app/javascript and only use these pack
 // files to reference that code so it'll be compiled.
 
-import './bootstrap.js';
-import './font_awesome.js';
-
 const Index = {};
 
 Index.aux = function() {
@@ -20,4 +17,10 @@ Index.aux = function() {
 
 $(document).on('turbolinks:load', function() {
   Index.aux();
+});
+
+$(document).on('turbolinks:load', () => {
+  $(function() {
+    $('[data-toggle="popover"]').popover();
+  });
 });
