@@ -5,12 +5,15 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %>
 // to the appropriate layout file, like app/views/layouts/application.html.erb
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("jquery")
 
-import 'javascript/index';
-import 'vendor/index';
-import 'stylesheets/application.scss';
+import './bootstrap_file';
+import './font_awesome';
+import './magnific-popup';
+import 'owl.carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+
+const Isotope = require('isotope-layout');
+require('isotope-packery');
+const jQueryBridget = require('jquery-bridget');
+// make Isotope a jQuery plugin
+jQueryBridget('isotope', Isotope, $);

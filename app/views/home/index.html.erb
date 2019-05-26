@@ -1,35 +1,48 @@
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button>
-
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+<!-- start section header -->
+<div id="header" class="home">
+  <div class="container">
+    <div class="header-content">
+      <h1 class="">
+        I'm <span class="typed"></span>
+      </h1>
+      <p class="">
+        designer, developeur, photographer
+      </p>
+    </div>
   </div>
 </div>
+<!-- End section header -->d
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on top
-</button>
+<!-- start section about us -->
+<div id="about" class="paddsection">
+  <div class="container">
+    <div class="row justify-content-between">
 
+      <div class="col-lg-4 ">
+        <div class="div-img-bg">
+          <div class="about-img">
+            <%= image_tag("me.jpg", class: "img-responsive", alt:"me")%>
+          </div>
+        </div>
+      </div>
 
-<i class="fas fa-ad"></i>
-<div id="target">
-  Click here
+      <div class="col-lg-7">
+        <div class="about-descr">
+
+          <p class="p-heading">im a ux /ui designer austin based who loves clean, simple & unique design. i also enjoy crafting brand identities, icons, & ilustration work. </p>
+          <p class="  separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.English person.</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
-<div id="other">
-  Trigger the handler
-</div>
+<!-- end section about us -->
+
+<%= render 'services.html.erb'%>
+
+<%= render 'portfolio.html.erb'%>
+
+<%= render 'journal.html.erb'%>
