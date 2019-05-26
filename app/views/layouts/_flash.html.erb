@@ -1,0 +1,14 @@
+<% if flash[message].present? %>
+  <% alert_class = if message == :notice
+                     'info'
+                   elsif message == :alert
+                     'danger'
+                   else
+                    'warning'
+                   end
+  %>
+  <div class="alert alert-<%= alert_class %> alert-dismissable text-center">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= simple_format flash[message], {}, wrapper_tag: 'span' %>
+  </div>
+<% end %>

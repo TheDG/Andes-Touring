@@ -1,0 +1,42 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar fixed-top shadow-none border-bottom">
+        <%= link_to 'Gauss CRM', root_path, class: 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-nav justify-content-end" id="navbarSupportedContent">
+          <% if true %>
+            <%= render "layouts/staff/header" %>
+          <% elsif true %>
+            <%= render "layouts/employees/header" %>
+          <% end %>
+        </div>
+      </nav>
+    </div>
+  <!-- start section navbar -->
+    <div class="row mt-5">
+      <nav id="main-nav">
+        <div class="row">
+          <div class="container">
+            <div class="logo">
+              <%= link_to root_path do %>
+                <%= image_tag("logo.png", alt: "logo")%>
+              <% end %>
+            </div>
+            <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+            <ul class="nav-menu list-unstyled">
+              <li><a href="#header" class="smoothScroll">Home</a></li>
+              <li><a href="#about" class="smoothScroll">About</a></li>
+              <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+              <li><a href="#journal" class="smoothScroll">Blog</a></li>
+              <li><a href="#contact" class="smoothScroll">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+<!-- End section navbar -->
+</header>

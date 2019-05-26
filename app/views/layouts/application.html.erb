@@ -17,6 +17,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div id="inner-body">
+      <%= render 'layouts/flash', message: :notice %>
+      <%= render 'layouts/flash', message: :alert %>
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
