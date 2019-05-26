@@ -13,22 +13,5 @@ import './magnific-popup';
 
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
-import Typed from 'typed.js';
-
-// ========================================================================= //
-//  Typed Js
-// ========================================================================= //
-
-$(document).on('turbolinks:load', () => {
-  const options = {
-    strings: ['Innovation.', 'Discovery.'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    showCursor: true,
-    cursorChar: '|',
-    loop: true
-  };
-  const typed = new Typed('.typed', options);
-});
 
 import './folio';
