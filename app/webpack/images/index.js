@@ -1,1 +1,0 @@
-import './home-bg.jpg';
