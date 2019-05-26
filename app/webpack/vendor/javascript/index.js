@@ -8,10 +8,12 @@
 
 import './bootstrap_file';
 import './font_awesome';
-import './isotope.pkgd.js';
 import './magnific-popup';
-
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 
-import './folio';
+const Isotope = require('isotope-layout');
+require('isotope-packery');
+const jQueryBridget = require('jquery-bridget');
+// make Isotope a jQuery plugin
+jQueryBridget('isotope', Isotope, $);
