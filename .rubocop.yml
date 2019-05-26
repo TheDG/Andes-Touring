@@ -1,0 +1,62 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  DisplayStyleGuide: true
+  Include:
+    - '**/*.rb'
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Gemfile'
+    - 'spec/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Rails:
+  Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*'
+  IgnoredPatterns: ['\A\s*#']
+  Max: 80
+
+Metrics/CyclomaticComplexity:
+  Max: 11
+
+Metrics/ModuleLength:
+  Max: 150
+
+Metrics/PerceivedComplexity:
+  Max: 7
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/RedundantBegin:
+  Enabled: false
