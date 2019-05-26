@@ -13,3 +13,4 @@ require("jquery")
 
 import 'javascript/index';
 import 'vendor/index';
+import 'images/index';
