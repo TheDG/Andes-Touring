@@ -1,0 +1,69 @@
+<div class="main-content paddsection">
+  <div class="">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+          <div class="container-main single-main">
+            <div class="col-md-12">
+              <div class="block-main mb-30">
+                <div class="content-main single-post padDiv">
+                  <div class="journal-txt">
+                    <h2>
+                      <a href="#">SO LETS MAKE THE MOST IS BEAUTIFUL</a>
+                    </h2>
+                  </div>
+                  <div class="post-meta">
+                    <ul class="list-unstyled mb-0">
+                      <li class="author">by:<a href="#">medsign</a>
+                      </li>
+                      <li class="date">date:<a href="#">March 31, 2017</a>
+                      </li>
+                      <li class="commont">
+                        <i class="far fa-heart"></i>
+                        <a href="#">3 Comments</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="mb-30">
+                    DESCRIPCION: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                    'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                  </p>
+                  <%= render 'data' %>
+
+                  <%= render 'modals' %>
+
+                  <div class='container m-4 pt-3'>
+                    <div id="owl-demo" class="img-carousel owl-theme">
+                      <div class="item">
+                        <a class="popup-img" href="<%=image_path("portfolio/1.jpg")%>">
+                          <%= image_tag("portfolio/1.jpg")%>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="popup-img" href="<%=image_path("portfolio/2.jpg")%>">
+                          <%= image_tag("portfolio/2.jpg")%>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="popup-img" href="<%=image_path("portfolio/3.jpg")%>">
+                          <%= image_tag("portfolio/3.jpg")%>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="popup-img" href="<%=image_path("portfolio/4.jpg")%>">
+                          <%= image_tag("portfolio/4.jpg")%>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <%= render 'comments' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div

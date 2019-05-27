@@ -12,4 +12,5 @@ require("channels")
 require("jquery")
 
 import 'javascript/index';
+import 'vendor/index';
 import 'stylesheets/application.scss';

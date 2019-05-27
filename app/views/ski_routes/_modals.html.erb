@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-6 text-center">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#routeModal">
+      Ver Descripcion Ruta
+    </button>
+  </div>
+  <div class="col-6 text-center">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#report">
+      Ver Reporte Clima
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <link href="//www.snow-forecast.com/stylesheets/feed.css" media="screen" rel="stylesheet" type="text/css"/>
+        <div id="wf-weatherfeed">
+          <iframe style="overflow:hidden;border:none;" allowtransparency="true" height="272" width="469" src="//www.snow-forecast.com/resorts/Abondance/forecasts/feed/mid/a" scrolling="no" frameborder="0" marginwidth="0" marginheight="0">
+            <p>Your browser does not support iframes.</p>
+          </iframe>
+          <div id="wf-link">
+            <a href="https://www.snow-forecast.com/"><img alt="Snow Forecast" src="//www.snow-forecast.com/images/feed/snowlogo-150.png"/></a>
+            <p id="cmt">View detailed snow forecast for
+              <a href="https://www.snow-forecast.com/resorts/Abondance/6day/mid">Abondance</a>
+              at:<br/>
+              <a href="https://www.snow-forecast.com/">
+                <strong>snow-forecast.com</strong>
+              </a>
+            </p>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

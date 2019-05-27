@@ -1,0 +1,38 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar fixed-top shadow-none border-bottom">
+        <%= link_to 'Andes Touring', root_path, class: 'navbar-brand', turbolinks: false %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-nav justify-content-end" id="navbarSupportedContent">
+          <% if true %>
+            <%= render "layouts/staff/header" %>
+          <% elsif true %>
+            <%= render "layouts/employees/header" %>
+          <% end %>
+        </div>
+      </nav>
+    </div>
+  <!-- start section navbar -->
+  <% if params[:controller] == 'home' %>
+    <div class="row mt-5">
+      <nav id="main-nav">
+        <div class="row">
+          <div class="container">
+            <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+            <ul class="nav-menu list-unstyled">
+              <li><a href="#header" class="smoothScroll">Home</a></li>
+              <li><a href="#about" class="smoothScroll">About</a></li>
+              <li><a href="#portfolio" class="smoothScroll">Rutas</a></li>
+              <li><a href="#journal" class="smoothScroll">Fotos</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <% end %>
+<!-- End section navbar -->
+</header>

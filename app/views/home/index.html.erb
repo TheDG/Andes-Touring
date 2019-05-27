@@ -1,35 +1,45 @@
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
-
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+<!-- start section header -->
+<div id="header" class="home">
+  <div class="container">
+    <div class="header-content">
+      <h1 class="">
+        We are
+        <span class="typed"></span>
+      </h1>
+      <p class="">
+        South America, Andes Touring
+      </p>
+    </div>
   </div>
 </div>
+<!-- End section header -->
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on top
-</button>
+<!-- start section about us -->
+<div id="about" class="class">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-7">
+        <div class="about-descr">
+          <p class="p-heading">
+            Aca va el tema princiapl de que somos
+          </p>
+          <p class="  separator">
+            Aca va mas caca jajajjaj
+          </p>
+        </div>
+      </div>
 
+      <div class="col-lg-5">
+        <%= image_tag("me.jpg", class: "img-fluid", alt:"img")%>
+      </div </div>
+    </div>
+  </div>
+  <!-- end section about us -->
 
-<i class="fas fa-ad"></i>
-<div id="target">
-  Click here
-</div>
-<div id="other">
-  Trigger the handler
+  <%= render 'services.html.erb'%>
+
+  <%= render 'routes.html.erb'%>
+
+  <%= render 'photos.html.erb'%>
+
 </div>
