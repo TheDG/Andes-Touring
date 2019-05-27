@@ -15,5 +15,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 const Isotope = require('isotope-layout');
 require('isotope-packery');
 const jQueryBridget = require('jquery-bridget');
+const imagesLoaded = require('imagesloaded');
 // make Isotope a jQuery plugin
 jQueryBridget('isotope', Isotope, $);
+imagesLoaded.makeJQueryPlugin($);

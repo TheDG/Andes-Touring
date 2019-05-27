@@ -430,7 +430,7 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#portfolio .portfolio-container {
+#portfolio #portfolio-container {
   display: inline-block;
   margin-bottom: 50px;
   width: 100%;
