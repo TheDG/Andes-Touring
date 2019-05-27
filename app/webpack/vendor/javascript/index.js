@@ -19,3 +19,8 @@ const imagesLoaded = require('imagesloaded');
 // make Isotope a jQuery plugin
 jQueryBridget('isotope', Isotope, $);
 imagesLoaded.makeJQueryPlugin($);
+
+
+$(document).on('turbolinks:load', () => {
+
+});

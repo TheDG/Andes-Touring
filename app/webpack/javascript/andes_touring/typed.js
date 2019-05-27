@@ -11,5 +11,8 @@ $(document).on('turbolinks:load', () => {
     cursorChar: '|',
     loop: true
   };
-  const typed = new Typed('.typed', options);
+  const typed = $('.typed');
+  if (typed.length) {
+    new Typed('.typed', options);
+  }
 });

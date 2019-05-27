@@ -16,15 +16,11 @@
       </nav>
     </div>
   <!-- start section navbar -->
+  <% if params[:controller] == 'home' %>
     <div class="row mt-5">
       <nav id="main-nav">
         <div class="row">
           <div class="container">
-            <div class="logo">
-              <%= link_to root_path do %>
-                <%= image_tag("logo.png", alt: "logo")%>
-              <% end %>
-            </div>
             <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
             <ul class="nav-menu list-unstyled">
               <li><a href="#header" class="smoothScroll">Home</a></li>
@@ -37,5 +33,6 @@
       </nav>
     </div>
   </div>
+  <% end %>
 <!-- End section navbar -->
 </header>

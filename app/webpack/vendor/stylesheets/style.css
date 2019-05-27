@@ -381,6 +381,27 @@ nav ul li a {
   background-color: #b8a07e;
 }
 
+.img-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.img-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  border: 0;
+  padding: 0 !important;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.img-carousel .owl-dot.active {
+  background-color: #b8a07e;
+}
+
 .owl-nav {
   display: none;
 }

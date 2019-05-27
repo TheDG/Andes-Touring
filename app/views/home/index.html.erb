@@ -1,10 +1,10 @@
-
 <!-- start section header -->
 <div id="header" class="home">
   <div class="container">
     <div class="header-content">
       <h1 class="">
-        We are <span class="typed"></span>
+        We are
+        <span class="typed"></span>
       </h1>
       <p class="">
         South America, Andes Touring
@@ -15,7 +15,7 @@
 <!-- End section header -->
 
 <!-- start section about us -->
-<div id="about" class=>
+<div id="about" class="class">
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-7">
@@ -30,15 +30,16 @@
       </div>
 
       <div class="col-lg-5">
-          <%= image_tag("me.jpg", class: "img-fluid", alt:"img")%>
-      </div
+        <%= image_tag("me.jpg", class: "img-fluid", alt:"img")%>
+      </div </div>
     </div>
   </div>
+  <!-- end section about us -->
+
+  <%= render 'services.html.erb'%>
+
+  <%= render 'routes.html.erb'%>
+
+  <%= render 'photos.html.erb'%>
+
 </div>
-<!-- end section about us -->
-
-<%= render 'services.html.erb'%>
-
-<%= render 'routes.html.erb'%>
-
-<%= render 'photos.html.erb'%>

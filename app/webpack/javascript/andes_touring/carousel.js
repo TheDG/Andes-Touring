@@ -22,8 +22,19 @@ $(document).on('turbolinks:load', () => {
     }
   });
 });
+$(document).on('turbolinks:load', () => {
+  $('.img-carousel').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin: 20,
+    singleItem: true
+  });
+});
 
 $(document).on('turbolinks:before-cache', function() {
   const carousel = $('.services-carousel');
+  const img = $('.img-carousel');
+
   carousel.owlCarousel('destroy');
+  img.owlCarousel('destroy');
 });
