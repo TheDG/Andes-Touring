@@ -20,6 +20,10 @@
 * `rake linters`
 * `rake tests`
 
+#### Credentials
+* `EDITOR="vim" rails credentials:edit --environment development`
+* `EDITOR="vim" rails credentials:show --environment development`
+
 #### Mount application
 * `rails s
 * Open `localhost:3000` with any browser
