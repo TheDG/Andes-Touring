@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    p @user
     if @user.update(user_params)
       flash[:notice] = 'User Updated succesfully'
       redirect_to root_path

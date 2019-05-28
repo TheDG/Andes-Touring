@@ -32,6 +32,7 @@
 # * `index_users_on_reset_password_token` (_unique_):
 #     * **`reset_password_token`**
 #
+require 'open-uri'
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -39,6 +40,7 @@ class User < ApplicationRecord
          :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   has_one_attached :avatar
+  has_many :ski_routes
 
   def self.from_omniauth(auth)
     user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -48,7 +50,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
       user.full_name = auth.info.name
     end
-    file = URI.open(auth.info.image)
+    file = open(auth.info.image)
     user.avatar.attach(io: file, filename: 'avatar.jpg')
     user
   end
