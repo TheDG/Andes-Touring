@@ -28,7 +28,9 @@
                       </li>
                       <li class="commont">
                         <i class="fas fa-comment"></i>
-                        <a href="#">3 Comments</a>
+                        <a href="#">
+                          <%=@ski_route.comments.size %> comments
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -66,7 +68,7 @@
                 </div>
               </div>
             </div>
-            <%= render 'comments' %>
+            <%= render 'comments', ski_route: @ski_route %>
           </div>
         </div>
       </div>

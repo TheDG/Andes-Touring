@@ -37,4 +37,5 @@ class SkiRoute < ApplicationRecord
   ASPECTS = %w[N NE E SE S SW W NW].freeze
 
   belongs_to :user
+  has_many :comments
 end
