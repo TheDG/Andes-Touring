@@ -20,6 +20,10 @@
 * `rake linters`
 * `rake tests`
 
+#### Credentials
+* `EDITOR="vim" rails credentials:edit --environment development`
+* `EDITOR="vim" rails credentials:show --environment development`
+
 #### Mount application
-* `rails s
+* `rails s -b 'ssl://localhost:3000?key=./.ssl/localhost.key&cert=./.ssl/localhost.crt'`
 * Open `localhost:3000` with any browser

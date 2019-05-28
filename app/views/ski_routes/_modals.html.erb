@@ -16,7 +16,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        ...
+        <%= @ski_route.route_description %>
       </div>
     </div>
   </div>
@@ -28,13 +28,17 @@
       <div class="modal-body">
         <link href="//www.snow-forecast.com/stylesheets/feed.css" media="screen" rel="stylesheet" type="text/css"/>
         <div id="wf-weatherfeed">
-          <iframe style="overflow:hidden;border:none;" allowtransparency="true" height="272" width="469" src="//www.snow-forecast.com/resorts/Abondance/forecasts/feed/mid/a" scrolling="no" frameborder="0" marginwidth="0" marginheight="0">
+          <iframe style="overflow:hidden;border:none;" allowtransparency="true" height="272" width="469"
+          src=<%="//www.snow-forecast.com/resorts/#{@ski_route.location}/forecasts/feed/mid/a"%>
+          scrolling="no" frameborder="0" marginwidth="0" marginheight="0">
             <p>Your browser does not support iframes.</p>
           </iframe>
           <div id="wf-link">
             <a href="https://www.snow-forecast.com/"><img alt="Snow Forecast" src="//www.snow-forecast.com/images/feed/snowlogo-150.png"/></a>
             <p id="cmt">View detailed snow forecast for
-              <a href="https://www.snow-forecast.com/resorts/Abondance/6day/mid">Abondance</a>
+              <a href=<%="https://www.snow-forecast.com/resorts/#{@ski_route.location}/6day/mid"%>>
+                <%= @ski_route.location %>
+              </a>
               at:<br/>
               <a href="https://www.snow-forecast.com/">
                 <strong>snow-forecast.com</strong>

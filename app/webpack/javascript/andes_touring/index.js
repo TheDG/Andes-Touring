@@ -7,3 +7,4 @@ import './folio';
 import './typed';
 import './carousel';
 import './isotope';
+import './magnifPopup';

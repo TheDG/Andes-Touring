@@ -5,6 +5,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 group :default do
+  # Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3).
+  gem 'aws-sdk-s3', '~> 1.23.1', require: false
+  # The authorization Gem for Ruby on Rails.
+  gem 'cancancan'
+  # gem for users
+  gem 'devise'
+  # Facebook OAuth2 Strategy for OmniAuth
+  gem 'omniauth-facebook'
   # Use postgresql as the database for Active Record
   gem 'pg', '>= 0.18', '< 2.0'
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
