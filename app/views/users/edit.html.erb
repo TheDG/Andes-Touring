@@ -1,27 +1,27 @@
 <div class="main-content paddsection">
-  <div class="">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="row">
-          <div class="container-main single-main">
-            <div class="offset-md-4 col-md-4 text-center">
-              <div class="block-main mb-30">
-                <h2>Edit User</h2>
-                <%= form_for(@user, html: { method: :patch }) do |f| %>
-                <div class="field">
-                  <%= f.label :full_name %><br/>
-                  <%= f.text_field :full_name, required: true %>
-                </div>
-                <div class="actions mt-2">
-                  <%= f.submit "Update", class:'btn btn-block' %>
-                </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="container-main single-main">
+          <div class="offset-md-4 col-md-4 text-center">
+            <div class="block-main mb-30">
+              <h2>Edit User</h2>
+              <% if @user.avatar.attached?%>
+                <%= image_tag(@user.avatar) %>
               <% end %>
-              <h3 class="mt-5 p-0">Unhappy?</h3>
-              <p class="p-0 m-1">
-                <%= button_to "Cancel my account", registration_path('user'),
-                 data: { confirm: "Are you sure?"}, method: :delete, class: 'btn btn-block' %>
-              </p>
-            </div>
+              <%= form_for(@user, html: { method: :patch }) do |f| %>
+              <div class="field">
+                <%= f.label :full_name %>
+                <%= f.text_field :full_name, required: true %>
+              </div>
+              <div class="actions mt-2">
+                <%= f.submit "Update", class:'btn btn-block' %>
+              </div>
+            <% end %>
+            <h3 class="mt-5 p-0">Unhappy?</h3>
+            <p class="p-0 m-1">
+              <%= button_to "Cancel my account", registration_path('user'), data: { confirm: "Are you sure?"}, method: :delete, class: 'btn btn-block' %>
+            </p>
           </div>
         </div>
       </div>
