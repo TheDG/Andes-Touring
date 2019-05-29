@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :comments, only: %i[create], shallow: true
   end
   resources :users, only: %i[edit update]
+
+  get '/privacy', to: redirect('/privacy_policy.html'), as: :privacy
 end
