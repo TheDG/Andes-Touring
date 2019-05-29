@@ -4,7 +4,7 @@
 
 $(document).on('turbolinks:load', () => {
   const options = {
-    strings: ['Innovation.', 'Discovery.', 'Community.', 'SKIING.'],
+    strings: ['Outdoors.', 'Discovery.', 'Community.', 'SKIING.'],
     typeSpeed: 100,
     backSpeed: 100,
     showCursor: true,

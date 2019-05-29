@@ -6,69 +6,44 @@
       <h2>Rutas</h2>
     </div>
   </div>
-
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-
         <div class="portfolio-list">
           <ul class="nav list-unstyled" id="portfolio-flters">
             <li class="filter filter-active" data-filter=".all">Todas</li>
-            <li class="filter" data-filter=".branding">branding</li>
-            <li class="filter" data-filter=".mockups">mockups</li>
-            <li class="filter" data-filter=".uikits">ui kits</li>
-            <li class="filter" data-filter=".webdesign">web design</li>
-            <li class="filter" data-filter=".photography">photography</li>
+            <% SkiRoute::SECTORS.each do |key, value|  %>
+              <li class="filter" data-filter=<%=".#{key}"%>><%= value %></li>
+            <% end %>
           </ul>
-
         </div>
 
         <div id="portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign">
-            <div class="journal-info">
-              <%= link_to ski_route_path(SkiRoute.first) do %>
-              <%= image_tag("portfolio/1.jpg", alt:"img")%>
-              <h5>
-                SO LETS MAKE THE MOST IS SEXYY
-              </h5>
-            <% end %>
-
+          <% @ski_routes.each do |route| %>
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all <%= route.sector%>">
+              <div class="journal-info">
+                <%= link_to ski_route_path(route) do %>
+                <%= image_tag(route.avatar.variant(resize_to_limit: [500, 500]), alt:"img")%>
+                <h5>
+                  <%= route.title %>
+                </h5>
+              <% end %>
+            </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups uikits photography">
+        <% end %>
+        <div class="col-lg-4 col-md-6 portfolio-thumbnail all">
           <div class="journal-info">
             <%= link_to ski_route_path(SkiRoute.first) do %>
             <%= image_tag("portfolio/2.jpg", alt:"img")%>
             <h5>
-              SO LETS MAKE THE MOST IS asdasdas
+              SO LETS MAKE THE MOST IS SEXYY
             </h5>
           <% end %>
         </div>
       </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding webdesig photography">
-        <div class="journal-info">
-          <%= link_to ski_route_path(SkiRoute.first) do %>
-          <%= image_tag("portfolio/3.jpg", alt:"img")%>
-          <h5>
-            SO LETS MAKE THE MOST IS XXXX
-          </h5>
-        <% end %>
       </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups webdesign photography">
-      <div class="journal-info">
-        <%= link_to ski_route_path(SkiRoute.first) do %>
-        <%= image_tag("portfolio/4.jpg", alt:"img")%>
-        <h5>
-          SO LETS MAKE THE MOST IS BEAUTIFULYYYYY
-        </h5>
-      <% end %>
     </div>
   </div>
 </div>
-</div>
-</div>
+
 <!-- End section portfolio -->

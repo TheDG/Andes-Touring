@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
-      <div class="offset-1 col-2">
+      <div class="offset-sm-1 col-sm-2">
         <div class="row justify-content-center">
           <i class="fas fa-route fa-4x"></i>
         </div>
@@ -9,10 +9,10 @@
           <h6>Distance</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold">4.2 km</h3>
+          <h3 class="font-weight-bold"><%=ski_route.distance%> km</h3>
         </div>
       </div>
-      <div class="col-2">
+      <div class="col-sm-2">
         <div class="row justify-content-center">
           <i class="fas fa-mountain fa-4x"></i>
         </div>
@@ -20,10 +20,10 @@
           <h6>Elevation</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold">500 m</h3>
+          <h3 class="font-weight-bold"><%=ski_route.vert%> m</h3>
         </div>
       </div>
-      <div class="col-2 text-center">
+      <div class="col-sm-2">
         <div class="row justify-content-center">
           <i class="fas fa-hourglass-start fa-4x"></i>
         </div>
@@ -31,10 +31,10 @@
           <h6>Time</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold">2h</h3>
+          <h3 class="font-weight-bold"><%=ski_route.time%>h</h3>
         </div>
       </div>
-      <div class="col-2 text-center">
+      <div class="col-sm-2">
         <div class="row justify-content-center">
           <i class="fas fa-cloud-sun fa-4x"></i>
         </div>
@@ -42,10 +42,10 @@
           <h6>Aspect</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold">NE</h3>
+          <h3 class="font-weight-bold"><%=ski_route.aspect%></h3>
         </div>
       </div>
-      <div class="col-2 text-center">
+      <div class="col-sm-2">
         <div class="row justify-content-center">
           <i class="fas fa-skull-crossbones fa-4x"></i>
         </div>
@@ -53,7 +53,7 @@
           <h6>Dificulty</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold">3</h3>
+          <h3 class="font-weight-bold"><%=ski_route.dificulty%></h3>
         </div>
       </div>
     </div>

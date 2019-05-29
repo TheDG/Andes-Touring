@@ -16,6 +16,7 @@
 # **`intro`**              | `text`             |
 # **`location`**           | `string`           |
 # **`route_description`**  | `text`             |
+# **`sector`**             | `string`           |
 # **`time`**               | `integer`          |
 # **`title`**              | `string`           |
 # **`updated_at`**         | `datetime`         | `not null`
@@ -31,11 +32,17 @@
 class SkiRoute < ApplicationRecord
   LOCATIONS = %w[AltodelPadre Antillanca Antuco CerroMirador Chapa-Verde
                  Lonquimay El-Colorado ElFraile Farellones Huilo-Huilo-Snow-Center
-                 LaParva LagunillasSkiCenter Llaima Chillan Portillo
+                 La-Parva LagunillasSkiCenter Llaima Chillan Portillo
                  PowderSouthHeliski PumaLodge Arpa Valle-Nevado VillarricaPucon VolcanOsorno].freeze
 
   ASPECTS = %w[N NE E SE S SW W NW].freeze
 
+  SECTORS = { valpo: 'Valparaíso', rm: 'RM', higgins: "O'Higgins", maule: 'Maule',
+              nuble: 'Ñuble', bio: 'Biobío', arauca: 'Araucanía', rios: 'Los Ríos',
+              lagos: 'Los Lagos', aysen: 'Aysén' }.freeze
+
   belongs_to :user
   has_many :comments
+  has_many :pictures
+  has_one_attached :avatar
 end

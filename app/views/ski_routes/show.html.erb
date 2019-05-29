@@ -29,7 +29,8 @@
                       <li class="commont">
                         <i class="fas fa-comment"></i>
                         <a href="#">
-                          <%=@ski_route.comments.size %> comments
+                          <%=@ski_route.comments.size %>
+                          comments
                         </a>
                       </li>
                     </ul>
@@ -37,32 +38,19 @@
                   <p class="mb-30">
                     <%= @ski_route.intro %>
                   </p>
-                  <%= render 'data' %>
+                  <%= render 'data', ski_route: @ski_route %>
 
                   <%= render 'modals' %>
 
                   <div class='container m-4 pt-3'>
                     <div id="owl-demo" class="img-carousel owl-theme">
-                      <div class="item">
-                        <a class="popup-img" title="TITLE1" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/1.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE2" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/2.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE3" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/3.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE4" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/4.jpg")%>
-                        </a>
-                      </div>
+                      <% @ski_route.pictures.each do |pic| %>
+                        <div class="item">
+                          <a class="popup-img" title="<%=pic.description%>" href="<%=url_for(pic.image)%>">
+                            <%= image_tag(pic.image)%>
+                          </a>
+                        </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
