@@ -3,47 +3,58 @@
 
   <div class="container">
     <div class="section-title text-center">
-      <h2>Rutas</h2>
+      <h2>Rutas
+        <% if user_signed_in? %>
+          <%= link_to '#', method: :delete do %>
+            <i class="fas fa-plus-circle float-right"></i>
+          <% end %>
+        <% else %>
+          <%= link_to_if false, '#', method: :delete do %>
+            <i class="fas fa-plus-circle float-right text-muted"
+            data-toggle="tooltip" data-html="true" title="Registrate para poder agregar rutas"></i>
+          <% end %>
+        <% end %>
+      </h2>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="portfolio-list">
-          <ul class="nav list-unstyled" id="portfolio-flters">
-            <li class="filter filter-active" data-filter=".all">Todas</li>
-            <% SkiRoute::SECTORS.each do |key, value|  %>
-              <li class="filter" data-filter=<%=".#{key}"%>><%= value %></li>
-            <% end %>
-          </ul>
-        </div>
-
-        <div id="portfolio-container">
-          <% @ski_routes.each do |route| %>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all <%= route.sector%>">
-              <div class="journal-info">
-                <%= link_to ski_route_path(route) do %>
-                <%= image_tag(route.avatar.variant(resize_to_limit: [500, 500]), alt:"img")%>
-                <h5>
-                  <%= route.title %>
-                </h5>
-              <% end %>
-            </div>
-          </div>
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <div class="portfolio-list">
+      <ul class="nav list-unstyled" id="portfolio-flters">
+        <li class="filter filter-active" data-filter=".all">Todas</li>
+        <% SkiRoute::SECTORS.each do |key, value|  %>
+          <li class="filter" data-filter=<%=".#{key}"%>><%= value %></li>
         <% end %>
-        <div class="col-lg-4 col-md-6 portfolio-thumbnail all">
+      </ul>
+    </div>
+
+    <div id="portfolio-container">
+      <% @ski_routes.each do |route| %>
+        <div class="col-lg-4 col-md-6 portfolio-thumbnail all <%= route.sector%>">
           <div class="journal-info">
-            <%= link_to ski_route_path(SkiRoute.first) do %>
-            <%= image_tag("portfolio/2.jpg", alt:"img")%>
+            <%= link_to ski_route_path(route) do %>
+            <%= image_tag(route.avatar.variant(resize_to_limit: [500, 500]), alt:"img")%>
             <h5>
-              SO LETS MAKE THE MOST IS SEXYY
+              <%= route.title %>
             </h5>
           <% end %>
         </div>
       </div>
-      </div>
+    <% end %>
+    <div class="col-lg-4 col-md-6 portfolio-thumbnail all">
+      <div class="journal-info">
+        <%= link_to ski_route_path(SkiRoute.first) do %>
+        <%= image_tag("portfolio/2.jpg", alt:"img")%>
+        <h5>
+          SO LETS MAKE THE MOST IS SEXYY
+        </h5>
+      <% end %>
     </div>
   </div>
+</div>
+</div>
+</div>
 </div>
 
 <!-- End section portfolio -->
