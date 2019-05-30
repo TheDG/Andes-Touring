@@ -2,6 +2,7 @@
 
 # Controller for ski routes
 class SkiRoutesController < ApplicationController
+  before_action :authenticate_user!, on: %i[new create]
   load_and_authorize_resource
 
   def show; end

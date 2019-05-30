@@ -9,6 +9,7 @@ import './carousel';
 import './isotope';
 import './magnifPopup';
 import './select2';
+import './add_pic';
 
 $(document).on('turbolinks:load', function() {
   $(':file').filestyle({
