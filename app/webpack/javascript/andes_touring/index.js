@@ -8,3 +8,15 @@ import './typed';
 import './carousel';
 import './isotope';
 import './magnifPopup';
+import './select2';
+
+$(document).on('turbolinks:load', function() {
+  $(':file').filestyle({
+  });
+});
+
+$(document).on('turbolinks:before-cache', function() {
+  $(':file').each(function(index, element) {
+    $(element).filestyle('destroy');
+  });
+});

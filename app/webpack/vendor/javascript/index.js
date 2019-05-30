@@ -11,6 +11,10 @@ import './font_awesome';
 import './magnific-popup';
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'select2';
+import 'select2/dist/js/i18n/es.js';
+import 'select2/dist/css/select2.css';
+import './bootstrap_filestyle';
 
 const Isotope = require('isotope-layout');
 require('isotope-packery');
@@ -19,8 +23,3 @@ const imagesLoaded = require('imagesloaded');
 // make Isotope a jQuery plugin
 jQueryBridget('isotope', Isotope, $);
 imagesLoaded.makeJQueryPlugin($);
-
-
-$(document).on('turbolinks:load', () => {
-
-});
