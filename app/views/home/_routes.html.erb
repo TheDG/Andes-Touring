@@ -5,18 +5,17 @@
     <div class="section-title text-center">
       <h2>Rutas
         <% if user_signed_in? %>
-          <%= link_to '#', method: :delete do %>
-            <i class="fas fa-plus-circle float-right"></i>
-          <% end %>
-        <% else %>
-          <%= link_to_if false, '#', method: :delete do %>
-            <i class="fas fa-plus-circle float-right text-muted"
-            data-toggle="tooltip" data-html="true" title="Registrate para poder agregar rutas"></i>
-          <% end %>
+          <%= link_to new_ski_route_path do %>
+          <i class="fas fa-plus-circle float-right"></i>
         <% end %>
-      </h2>
-    </div>
-  </div>
+      <% else %>
+        <%= link_to_if false, '#' do %>
+        <i class="fas fa-plus-circle float-right text-muted" data-toggle="tooltip" data-html="true" title="Registrate para poder agregar rutas"></i>
+      <% end %>
+    <% end %>
+  </h2>
+</div>
+</div>
 <div class="container">
 <div class="row">
   <div class="col-md-12">
@@ -34,7 +33,11 @@
         <div class="col-lg-4 col-md-6 portfolio-thumbnail all <%= route.sector%>">
           <div class="journal-info">
             <%= link_to ski_route_path(route) do %>
-            <%= image_tag(route.avatar.variant(resize_to_limit: [500, 500]), alt:"img")%>
+            <% if route.avatar.attached? %>
+              <%= image_tag(route.avatar.variant(resize_to_limit: [500, 500]), alt:"img")%>
+            <% else %>
+              <%= image_tag('placeholder.jpg', alt:"img")%>
+            <% end %>
             <h5>
               <%= route.title %>
             </h5>
@@ -45,7 +48,7 @@
     <div class="col-lg-4 col-md-6 portfolio-thumbnail all">
       <div class="journal-info">
         <%= link_to ski_route_path(SkiRoute.first) do %>
-        <%= image_tag("portfolio/2.jpg", alt:"img")%>
+        <%= image_tag("home-bg0.jpg", alt:"img")%>
         <h5>
           SO LETS MAKE THE MOST IS SEXYY
         </h5>

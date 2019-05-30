@@ -27,8 +27,14 @@
           <h6>Elevation</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold"><%=ski_route.vert%>
-            m</h3>
+          <h3 class="font-weight-bold">
+            <% if ski_route.vert %>
+              <%=ski_route.vert%>
+              m
+            <% else %>
+              ?
+            <% end %>
+          </h3>
         </div>
       </div>
       <div class="col-sm-2">
@@ -39,7 +45,14 @@
           <h6>Time</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold"><%=ski_route.time%>h</h3>
+          <h3 class="font-weight-bold">
+            <% if ski_route.time %>
+              <%=ski_route.time%>
+              h
+            <% else %>
+              ?
+            <% end %>
+          </h3>
         </div>
       </div>
       <div class="col-sm-2">
@@ -50,7 +63,13 @@
           <h6>Aspect</h6>
         </div>
         <div class="row justify-content-center">
-          <h3 class="font-weight-bold"><%=ski_route.aspect%></h3>
+          <h3 class="font-weight-bold">
+            <% if ski_route.aspect.present? %>
+              <%=ski_route.aspect%>
+            <% else %>
+              ?
+            <% end %>
+          </h3>
         </div>
       </div>
       <div class="col-sm-2">
