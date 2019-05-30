@@ -45,4 +45,7 @@ class SkiRoute < ApplicationRecord
   has_many :comments
   has_many :pictures
   has_one_attached :avatar
+
+  accepts_nested_attributes_for :pictures
+
 end

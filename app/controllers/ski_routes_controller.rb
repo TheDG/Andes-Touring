@@ -21,7 +21,8 @@ class SkiRoutesController < ApplicationController
   def ski_route_params
     params.require(:ski_route).permit(:title, :intro, :distance, :vert,
                                       :time, :aspect, :dificulty, :route_description,
-                                      :location, :sector, :avatar)
+                                      :location, :sector, :avatar,
+                                      pictures_attributes: %i[description image])
           .merge(user: current_user)
   end
 end
