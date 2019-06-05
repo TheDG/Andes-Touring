@@ -3,16 +3,10 @@
 
   <div class="container">
     <div class="section-title text-center">
-      <h2>Rutas
-        <% if user_signed_in? %>
+      <h2>Mis Rutas
           <%= link_to new_ski_route_path do %>
             <i class="fas fa-plus-circle float-right"></i>
           <% end %>
-        <% else %>
-          <%= link_to_if false, '#' do %>
-            <i class="fas fa-plus-circle float-right text-muted" data-toggle="tooltip" data-html="true" title="Registrate para poder agregar rutas"></i>
-          <% end %>
-        <% end %>
       </h2>
     </div>
   </div>

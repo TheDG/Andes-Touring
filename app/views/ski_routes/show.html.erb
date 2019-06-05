@@ -10,6 +10,11 @@
                   <h2>
                     <a href="#">
                       <%= @ski_route.title %>
+                      <% if can? :edit, @ski_route %>
+                        <%= link_to edit_ski_route_path do %>
+                          <i class="fas fa-edit float-right"></i>
+                        <% end %>
+                      <% end %>
                     </a>
                   </h2>
                 </div>
@@ -44,11 +49,13 @@
                 <div class='container m-4 pt-3'>
                   <div id="owl-demo" class="img-carousel owl-theme">
                     <% @ski_route.pictures.each do |pic| %>
-                      <div class="item">
-                        <a class="popup-img" title="<%=pic.description%>" href="<%=url_for(pic.image)%>">
-                          <%= image_tag(pic.image)%>
-                        </a>
-                      </div>
+                      <% if pic.image.attached? %>
+                        <div class="item">
+                          <a class="popup-img" title="<%=pic.description%>" href="<%=url_for(pic.image)%>">
+                            <%= image_tag(pic.image)%>
+                          </a>
+                        </div>
+                      <% end %>
                     <% end %>
                   </div>
                 </div>

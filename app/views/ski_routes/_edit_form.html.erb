@@ -4,12 +4,6 @@
   <div class="col-lg-12">
     <hr>
     <div class="form-group row justify-content-center">
-      <label class="col-sm-3 col-form-label" for="inlineFormCustomSelectPref">Nombre</label>
-      <div class="col-sm-7">
-        <%= f.text_field :title, class: 'form-control', required: true %>
-      </div>
-    </div>
-    <div class="form-group row justify-content-center">
       <label class="col-sm-3 col-form-label" for="inlineFormCustomSelectPref">Texto Introductorio</label>
       <div class="col-sm-7">
         <%= f.text_area :intro, class: 'form-control', required: true, rows: 5 %>
@@ -36,11 +30,11 @@
           <div class="row">
             <div class="col-6 text-center">
               Aspect
-              <%= f.select :aspect, options_for_select(SkiRoute::ASPECTS),{ include_blank: true }, { class: 'custom-select' } %>
+              <%= f.select :aspect, options_for_select(SkiRoute::ASPECTS, selected: ski_route.aspect),{ include_blank: true }, { class: 'custom-select' } %>
             </div>
             <div class="col-6 text-center">
               Dificultad
-              <%= f.select :dificulty, options_for_select((0..10)),{}, { class: 'custom-select' } %>
+              <%= f.select :dificulty, options_for_select((0..10), selected: ski_route.dificulty),{}, { class: 'custom-select' } %>
             </div>
           </div>
         </div>
@@ -59,37 +53,11 @@
           <div class="row">
             <div class="col-sm-12 col-md-6 text-center">
               Estación de Pronostico
-              <%= f.select :location, options_for_select(SkiRoute::LOCATIONS), { include_blank: true }, { class: 'custom-select'} %>
+              <%= f.select :location, options_for_select(SkiRoute::LOCATIONS, selected: ski_route.location), { include_blank: true }, { class: 'custom-select'} %>
             </div>
             <div class="col-sm-12 col-md-6 text-center">
               Region
-              <%= f.select :sector, options_for_select(SkiRoute::SECTORS.invert), {}, { class: 'custom-select'} %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row justify-content-center">
-      <label class="col-sm-3 col-form-label" for="inlineFormCustomSelectPref">Imagenes</label>
-      <div class="col-sm-7">
-        <div class="border p-3">
-          <div class="row border-bottom pb-4">
-            <div class="col-sm-12 text-center">
-              Foto Portada
-              <div class="custom-file">
-                <%= f.file_field :avatar, { class: 'custom-file-input py-2', required: true, id: "avatar"} %>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 text-center pt-3">
-              Otras Fotos
-              <%= link_to '#', id: "ski_route-add_pic", class:'border-0 bg-transparent' do %>
-                <i class="fas fa-plus-circle bg-red"></i>
-              <% end %>
-              <div id=extra_pic-container>
-                <%= render 'extra_pic', ski_route: @ski_route, f:f, i: 0 %>
-              </div>
+              <%= f.select :sector, options_for_select(SkiRoute::SECTORS.invert, selected: ski_route.sector), {}, { class: 'custom-select'} %>
             </div>
           </div>
         </div>
