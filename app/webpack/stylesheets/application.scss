@@ -1,9 +1,33 @@
 #owl-demo .item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 250px;
 }
+$custom-file-text: (
+  en: "Browse",
+  es: "Elegir"
+);
 
-.item_img {
-  max-width: 300px;
+.btn-wrap-text {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: normal !important;
+}
+@media (max-width: 991px) {
+  #about {
+    padding-top: 80px !important;
+  }
+}
+@media (max-width: 480px) {
+  #about {
+    padding-top: 100px !important;
+  }
+
+  #portfolio {
+    padding-top: 125px !important;
+  }
+
+  #journal {
+    padding-top: 125px !important;
+  }
 }

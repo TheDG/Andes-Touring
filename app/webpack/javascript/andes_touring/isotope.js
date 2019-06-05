@@ -22,5 +22,4 @@ $(document).on('turbolinks:load', () => {
 
 $(document).on('turbolinks:before-cache', function() {
   const portfolioIsotope = $('#portfolio-container');
-  portfolioIsotope.isotope('destroy');
 });

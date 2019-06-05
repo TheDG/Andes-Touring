@@ -20,7 +20,6 @@
 #     * **`ski_route_id`**
 #
 
-
 class Comment < ApplicationRecord
   belongs_to :ski_route
 

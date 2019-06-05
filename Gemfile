@@ -11,6 +11,8 @@ group :default do
   gem 'cancancan'
   # gem for users
   gem 'devise'
+  # Translations for the devise gem
+  gem 'devise-i18n', '~>1.6.4'
   # Facebook OAuth2 Strategy for OmniAuth
   gem 'omniauth-facebook'
   # Use postgresql as the database for Active Record
@@ -19,6 +21,9 @@ group :default do
   gem 'rails', '~> 6.0.0.rc1'
   # Use Puma as the app server
   gem 'puma', '~> 3.11'
+  # A set of common locale data and translations to internationalize
+  # and/or localize your Rails applications.
+  gem 'rails-i18n', '~> 6.0.0.beta1'
   # Use SCSS for stylesheets
   gem 'sass-rails', '~> 5'
   # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -33,7 +38,7 @@ group :default do
   # gem 'bcrypt', '~> 3.1.7'
 
   # Use Active Storage variant
-  # gem 'image_processing', '~> 1.2'
+  gem 'image_processing', '~> 1.2'
   # Reduces boot times through caching; required in config/boot.rb
   gem 'bootsnap', '>= 1.4.2', require: false
 end

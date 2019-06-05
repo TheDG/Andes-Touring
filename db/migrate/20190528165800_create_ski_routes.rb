@@ -10,6 +10,7 @@ class CreateSkiRoutes < ActiveRecord::Migration[6.0]
       t.integer :dificulty
       t.text :route_description
       t.string :location
+      t.string :sector
       t.belongs_to :user, index: true
       t.timestamps
     end

@@ -1,75 +1,68 @@
 <div class="main-content paddsection">
-  <div class="">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="row">
-          <div class="container-main single-main">
-            <div class="col-md-12">
-              <div class="block-main mb-30">
-                <div class="content-main single-post padDiv">
-                  <div class="journal-txt">
-                    <h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="container-main single-main">
+          <div class="col-md-12">
+            <div class="block-main mb-30">
+              <div class="content-main single-post padDiv">
+                <div class="journal-txt">
+                  <h2>
+                    <a href="#">
+                      <%= @ski_route.title %>
+                      <% if can? :edit, @ski_route %>
+                        <%= link_to edit_ski_route_path do %>
+                          <i class="fas fa-edit float-right"></i>
+                        <% end %>
+                      <% end %>
+                    </a>
+                  </h2>
+                </div>
+                <div class="post-meta">
+                  <ul class="list-unstyled mb-0">
+                    <li class="author">por:
                       <a href="#">
-                        <%= @ski_route.title %>
+                        <%= @ski_route.user.full_name %>
                       </a>
-                    </h2>
-                  </div>
-                  <div class="post-meta">
-                    <ul class="list-unstyled mb-0">
-                      <li class="author">by:
-                        <a href="#">
-                          <%= @ski_route.user.full_name %>
-                        </a>
-                      </li>
-                      <li class="date">date:
-                        <a href="#">
-                          <%= @ski_route.created_at.strftime('%B %d, %Y') %>
-                        </a>
-                      </li>
-                      <li class="commont">
-                        <i class="fas fa-comment"></i>
-                        <a href="#">
-                          <%=@ski_route.comments.size %> comments
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <p class="mb-30">
-                    <%= @ski_route.intro %>
-                  </p>
-                  <%= render 'data' %>
+                    </li>
+                    <li class="date">fecha:
+                      <a href="#">
+                        <%= @ski_route.created_at.strftime('%B %d, %Y') %>
+                      </a>
+                    </li>
+                    <li class="commont">
+                      <i class="fas fa-comment"></i>
+                      <a href="#">
+                        <%=@ski_route.comments.size %>
+                        <%= "comentario#{'s' unless @ski_route.comments.size == 1}"%>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="mb-30">
+                  <%= @ski_route.intro %>
+                </p>
+                <%= render 'data', ski_route: @ski_route %>
 
-                  <%= render 'modals' %>
+                <%= render 'modals', ski_route: @ski_route %>
 
-                  <div class='container m-4 pt-3'>
-                    <div id="owl-demo" class="img-carousel owl-theme">
-                      <div class="item">
-                        <a class="popup-img" title="TITLE1" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/1.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE2" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/2.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE3" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/3.jpg")%>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="popup-img" title="TITLE4" href="<%=image_path("portfolio/1.jpg")%>">
-                          <%= image_tag("portfolio/4.jpg")%>
-                        </a>
-                      </div>
-                    </div>
+                <div class='container m-4 pt-3'>
+                  <div id="owl-demo" class="img-carousel owl-theme">
+                    <% @ski_route.pictures.each do |pic| %>
+                      <% if pic.image.attached? %>
+                        <div class="item">
+                          <a class="popup-img" title="<%=pic.description%>" href="<%=url_for(pic.image)%>">
+                            <%= image_tag(pic.image)%>
+                          </a>
+                        </div>
+                      <% end %>
+                    <% end %>
                   </div>
                 </div>
               </div>
             </div>
-            <%= render 'comments', ski_route: @ski_route %>
           </div>
+          <%= render 'comments', ski_route: @ski_route %>
         </div>
       </div>
     </div>

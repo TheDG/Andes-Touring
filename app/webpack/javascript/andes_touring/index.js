@@ -8,3 +8,17 @@ import './typed';
 import './carousel';
 import './isotope';
 import './magnifPopup';
+import './select2';
+import './add_pic';
+
+$(document).on('turbolinks:load', function() {
+  $(':file').filestyle({
+    text: 'Buscar archivo'
+  });
+});
+
+$(document).on('turbolinks:before-cache', function() {
+  $(':file').each(function(index, element) {
+    $(element).filestyle('destroy');
+  });
+});

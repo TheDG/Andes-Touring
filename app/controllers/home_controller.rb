@@ -4,5 +4,7 @@
 require 'open-uri'
 
 class HomeController < ApplicationController
-  def index; end
+  def index
+    @ski_routes = SkiRoute.all
+   end
 end

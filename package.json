@@ -19,6 +19,7 @@
     "jquery-bridget": "^2.0.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.15.0",
+    "select2": "^4.0.7",
     "turbolinks": "^5.2.0",
     "typed.js": "^2.0.10",
     "url-loader": "^1.1.2"

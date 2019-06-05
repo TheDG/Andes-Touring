@@ -1,23 +1,23 @@
 <header>
   <div class="container-fluid">
     <div class="row">
-      <nav class="navbar fixed-top shadow-none border-bottom">
+      <nav class="navbar fixed-top shadow-none border-bottom navbar-expand-lg navbar-light">
         <%= link_to 'Andes Touring', root_path, class: 'navbar-brand', turbolinks: false %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
         </button>
-        <span>
+        <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
           <% if user_signed_in? %>
             <%= render "layouts/user/header" %>
           <% else %>
-            <%= link_to "Login", new_user_session_path %>
+            <%= link_to "Login", new_user_session_path, class: "ml-auto" %>
           <% end %>
-        </span>
+        </div>
       </nav>
     </div>
     <!-- start section navbar -->
     <% if params[:controller] == 'home' %>
-      <div class="row mt-5">
+      <div class="row mt-4">
         <nav id="main-nav">
           <div class="row">
             <div class="container">
@@ -26,10 +26,10 @@
               </div>
               <ul class="nav-menu list-unstyled">
                 <li>
-                  <a href="#header" class="smoothScroll">Home</a>
+                  <a href="#header" class="smoothScroll">Inicio</a>
                 </li>
                 <li>
-                  <a href="#about" class="smoothScroll">About</a>
+                  <a href="#about" class="smoothScroll">Sobre Nosotros</a>
                 </li>
                 <li>
                   <a href="#portfolio" class="smoothScroll">Rutas</a>
