@@ -13,3 +13,21 @@ $custom-file-text: (
   word-wrap: break-word !important;
   word-break: normal !important;
 }
+@media (max-width: 991px) {
+  #about {
+    padding-top: 80px !important;
+  }
+}
+@media (max-width: 480px) {
+  #about {
+    padding-top: 100px !important;
+  }
+
+  #portfolio {
+    padding-top: 125px !important;
+  }
+
+  #journal {
+    padding-top: 125px !important;
+  }
+}

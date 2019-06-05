@@ -14,9 +14,6 @@ $(document).on('turbolinks:load', function() {
     if ($('.home').length) {
       $('a').each(function() {
         $(this).removeClass('active');
-        if ($(window).width() < 768) {
-          $('.nav-menu').slideUp();
-        }
       });
 
       $(this).addClass('active');

@@ -19,26 +19,14 @@
   }
 
   .nav-menu {
-    margin-top: 40px;
-    display: none;
     float: none;
     width: 100%;
   }
 
-  .nav-menu li {
-    float: none;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #f7f7f7;
-    line-height: 45px;
-    margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  .nav-menu li {}
 
   .responsive {
     float: right;
-    padding-top: 15px;
     display: block;
   }
 
@@ -102,26 +90,14 @@
   }
 
   .nav-menu {
-    margin-top: 40px;
-    display: none;
     float: none;
     width: 100%;
   }
 
-  .nav-menu li {
-    float: none;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #f7f7f7;
-    line-height: 45px;
-    margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  .nav-menu li {}
 
   .responsive {
     float: right;
-    padding-top: 15px;
     display: block;
   }
 
@@ -185,26 +161,14 @@
   }
 
   .nav-menu {
-    margin-top: 40px;
-    display: none;
     float: none;
     width: 100%;
   }
 
-  .nav-menu li {
-    float: none;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #f7f7f7;
-    line-height: 45px;
-    margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  .nav-menu li {}
 
   .responsive {
     float: right;
-    padding-top: 15px;
     display: block;
   }
 
@@ -263,13 +227,7 @@
 @media (max-width: 480px) {
 
   /* Navbar */
-  nav {
-    padding: 20px 15px;
-  }
-
   .nav-menu {
-    margin-top: 40px;
-    display: none;
     float: none;
     width: 100%;
   }
@@ -281,13 +239,12 @@
     border-top: 1px solid #f7f7f7;
     line-height: 45px;
     margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .responsive {
     float: right;
-    padding-top: 15px;
     display: block;
   }
 
@@ -345,13 +302,7 @@
 @media (max-width: 320px) {
 
   /* Navbar */
-  nav {
-    padding: 20px 15px;
-  }
-
   .nav-menu {
-    margin-top: 40px;
-    display: none;
     float: none;
     width: 100%;
   }
@@ -363,13 +314,12 @@
     border-top: 1px solid #f7f7f7;
     line-height: 45px;
     margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .responsive {
     float: right;
-    padding-top: 15px;
     display: block;
   }
 
