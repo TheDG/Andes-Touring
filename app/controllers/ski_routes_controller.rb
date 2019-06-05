@@ -2,7 +2,7 @@
 
 # Controller for ski routes
 class SkiRoutesController < ApplicationController
-  before_action :authenticate_user!, on: %i[new create index]
+  before_action :authenticate_user!, only: %i[new create index edit update]
   load_and_authorize_resource
 
   def show; end
@@ -24,16 +24,6 @@ class SkiRoutesController < ApplicationController
   end
 
   def edit; end
-
-  def create
-    if @ski_route.save
-      flash[:notice] = 'Ruta creada satisfactoriamente'
-      redirect_to ski_route_path(@ski_route)
-    else
-      flash.now[:alert] = 'Hubo un problema al tratar de crear la ruta'
-      render 'new', status: :unprocessable_entity
-    end
-  end
 
   def update
     if @ski_route.update(ski_route_params)

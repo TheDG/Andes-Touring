@@ -1,0 +1,48 @@
+es:
+  "true": 'Si'
+  "false": 'No'
+  unauthorized:
+    manage:
+      all: "No tienes acceso a este recurso"
+  activerecord:
+    models:
+      comment:
+        one: Comentario
+        other: Comentarios
+      ski_route:
+        one: Ruta
+        other: Rutas
+    attributes:
+      ski_route:
+        distance: Distancia
+        vert: Vertical
+        time: Tiempo
+        aspect: Aspecto
+        dificulty: Dificultad
+    errors:
+      models:
+        item:
+          attributes:
+            student:
+              duplicate_service: Estudiante ya compro esa sección
+        quote:
+          already_earned: Cotización ya fue ganada
+          set_values: Hubo un problema guardando los datos. Porfavor contactar a Gladius
+  helpers:
+    submit:
+      user:
+        update: "Actualizar Perfil"
+  sale:
+    status:
+      earned: Ganada
+      commited: Entregada
+  payment_method:
+    message:
+      cash: Precio arancel pagando al contado en 1 cheque o transferencia
+      credit_card: Precio arancel pagando con tarjeta de crédito
+      check: Pago mensualidades en %{count} cheques por un monto de
+    contract_message:
+      cash: Pago contado de la totalidad de la colegiatura, en un cheque al día o transferencia
+        bancaria
+      credit_card: Pago con tarjeta de crédito
+      check: Pago con cheques según tabla adjunta en anexo

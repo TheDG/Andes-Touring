@@ -13,6 +13,7 @@ import './add_pic';
 
 $(document).on('turbolinks:load', function() {
   $(':file').filestyle({
+    text: 'Buscar archivo'
   });
 });
 

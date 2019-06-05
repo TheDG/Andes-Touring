@@ -20,12 +20,12 @@
                 </div>
                 <div class="post-meta">
                   <ul class="list-unstyled mb-0">
-                    <li class="author">by:
+                    <li class="author">por:
                       <a href="#">
                         <%= @ski_route.user.full_name %>
                       </a>
                     </li>
-                    <li class="date">date:
+                    <li class="date">fecha:
                       <a href="#">
                         <%= @ski_route.created_at.strftime('%B %d, %Y') %>
                       </a>
@@ -34,7 +34,7 @@
                       <i class="fas fa-comment"></i>
                       <a href="#">
                         <%=@ski_route.comments.size %>
-                        comments
+                        <%= "comentario#{'s' unless @ski_route.comments.size == 1}"%>
                       </a>
                     </li>
                   </ul>

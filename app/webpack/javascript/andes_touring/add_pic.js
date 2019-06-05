@@ -39,6 +39,7 @@ SkiRoute.addPic = function(e) {
 
     clone.find('.bootstrap-filestyle').remove();
     clone.find(':file').filestyle({
+      text: 'Buscar archivo'
     });
     clone.insertAfter(lastPic);
   }

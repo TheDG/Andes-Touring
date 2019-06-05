@@ -8,10 +8,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = 'User Updated succesfully'
+      flash[:notice] = 'Perfil actualizado satisfactoriamente'
       redirect_to root_path
     else
-      flash.now[:alert] = 'Problem updating user'
+      flash.now[:alert] = 'Hubo un problema al tratar de actualizar el perfil'
       render 'edit', status: :unprocessable_entity
     end
   end
