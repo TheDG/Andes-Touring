@@ -11,13 +11,13 @@
 # **`aspect`**             | `string`           |
 # **`created_at`**         | `datetime`         | `not null`
 # **`dificulty`**          | `integer`          |
-# **`distance`**           | `integer`          |
+# **`distance`**           | `decimal(, )`      |
 # **`id`**                 | `bigint(8)`        | `not null, primary key`
 # **`intro`**              | `text`             |
 # **`location`**           | `string`           |
 # **`route_description`**  | `text`             |
 # **`sector`**             | `string`           |
-# **`time`**               | `integer`          |
+# **`time`**               | `decimal(, )`      |
 # **`title`**              | `string`           |
 # **`updated_at`**         | `datetime`         | `not null`
 # **`user_id`**            | `bigint(8)`        | `indexed`

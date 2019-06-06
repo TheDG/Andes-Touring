@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 2019_05_29_163614) do
   create_table "ski_routes", force: :cascade do |t|
     t.string "title"
     t.text "intro"
-    t.integer "distance"
+    t.decimal "distance"
     t.integer "vert"
-    t.integer "time"
+    t.decimal "time"
     t.string "aspect"
     t.integer "dificulty"
     t.text "route_description"
