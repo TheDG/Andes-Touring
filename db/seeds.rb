@@ -583,7 +583,7 @@ file = File.open(Rails.root.join('app', 'assets', 'images', 'arauco', "avatar.jp
 arauco.avatar.attach(io: file, filename: 'avatar.jpg')
 
 pic = Picture.create!(ski_route_id: arauco.id, description: "ENLACE1")
-file = File.open(Rails.root.join('app', 'assets', 'images', 'arauco', "enlace.jpg"))
+file = File.open(Rails.root.join('app', 'assets', 'images', 'arauco', "enlace1.jpg"))
 pic.image.attach(io: file, filename: "img1")
 
 pic = Picture.create!(ski_route_id: arauco.id, description: "ENLACE2")
@@ -618,7 +618,7 @@ pic.image.attach(io: file, filename: "img7")
 
 custodio  = SkiRoute.create!(
   user: User.first,
-  title: 'Portezuelo Ibañez(Chute custodio)',
+  title: 'Portezuelo Ibañez - Chute Custodio',
   intro: 'Esta es de las líneas más largas que se pueden bajar en el Portezuelo Ibañez.',
   distance: nil,
   vert: nil,
@@ -634,7 +634,7 @@ custodio  = SkiRoute.create!(
   location: 'ElFraile',
   sector: 'aysen'
 )
-file = File.open(Rails.root.join('app', 'assets', 'images', 'custodio', "avatar.jpg"))
+file = File.open(Rails.root.join('app', 'assets', 'images', 'custodio', "run.jpg"))
 custodio.avatar.attach(io: file, filename: 'avatar.jpg')
 
 pic = Picture.create!(ski_route_id: custodio.id, description: "ENLACE")
@@ -647,6 +647,10 @@ pic.image.attach(io: file, filename: "img2")
 
 pic = Picture.create!(ski_route_id: custodio.id, description: "")
 file = File.open(Rails.root.join('app', 'assets', 'images', 'custodio', "run.jpg"))
+pic.image.attach(io: file, filename: "img3")
+
+pic = Picture.create!(ski_route_id: custodio.id, description: "")
+file = File.open(Rails.root.join('app', 'assets', 'images', 'custodio', "avatar.jpg"))
 pic.image.attach(io: file, filename: "img3")
 
 "-----"
