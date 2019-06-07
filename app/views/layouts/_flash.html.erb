@@ -7,7 +7,7 @@
                     'warning'
                    end
   %>
-  <div class="alert alert-<%= alert_class %> alert-dismissable text-center">
+  <div class="alert alert-<%= alert_class %> alert-dismissable text-center mt-5">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <%= simple_format flash[message], {}, wrapper_tag: 'span' %>
   </div>

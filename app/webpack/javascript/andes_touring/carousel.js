@@ -36,10 +36,9 @@ $(document).on('turbolinks:load', () => {
 $(document).on('turbolinks:load', () => {
   const owl = $('.img-carousel').owlCarousel({
     autoplay: true,
-    loop: true,
     margin: 10,
     dots: true,
-    nav: false,
+    nav: true,
     responsiveClass: true,
     responsive: {
       0: {

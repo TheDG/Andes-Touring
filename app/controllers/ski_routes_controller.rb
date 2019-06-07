@@ -26,7 +26,7 @@ class SkiRoutesController < ApplicationController
   def edit; end
 
   def update
-    if @ski_route.update(ski_route_params)
+    if @ski_route.update(ski_route_update_params)
       flash[:notice] = 'Ruta actualizada satisfactoriamente'
       redirect_to ski_route_path(@ski_route)
     else
@@ -41,5 +41,12 @@ class SkiRoutesController < ApplicationController
                                       :location, :sector, :avatar,
                                       pictures_attributes: %i[description image])
           .merge(user: current_user)
+  end
+
+  def ski_route_update_params
+    params.require(:ski_route).permit(:title, :intro, :distance, :vert,
+                                      :time, :aspect, :dificulty, :route_description,
+                                      :location, :sector, :avatar,
+                                      pictures_attributes: %i[description image])
   end
 end
