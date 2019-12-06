@@ -20,7 +20,7 @@ group :default do
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '~> 6.0.0.rc1'
   # Use Puma as the app server
-  gem 'puma', '~> 3.11'
+  gem 'puma', '~> 3.12'
   # A set of common locale data and translations to internationalize
   # and/or localize your Rails applications.
   gem 'rails-i18n', '~> 6.0.0.beta1'
